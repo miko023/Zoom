@@ -19,49 +19,14 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-
-	}
-
+		setContentView(R.layout.activity_main);}
 	
-	LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-	LocationListener locationListener = new LocationListener(){
-
-		public void onLocationChanged(Location location ){
-			makeUseOfNewLocation(location);
-		}
-
-		@Override
-		public void onProviderDisabled(String provider) {
-			// TODO Auto-generated method stub
-		}
-
-		@Override
-		public void onProviderEnabled(String provider) {
-			// TODO Auto-generated method stub
-		}
-
-		@Override
-		public void onStatusChanged(String provider, int status,
-				Bundle extras) {
-			// TODO Auto-generated method stub
-		}
-
-		@Override
-		public void onLocationChanged(android.location.Location location) {
-			// TODO Auto-generated method stub
-			
-		}
-	};
-
-	
-	public void openCamera(View view){
-		Intent cameraIntent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
-		
-		startActivityForResult(cameraIntent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
-		
-	}
+//	public void openCamera(View view){
+//		Intent cameraIntent = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
+//		
+//		startActivityForResult(cameraIntent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
+//		
+//	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -69,4 +34,5 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
+	
 }

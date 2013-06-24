@@ -9,6 +9,6 @@ package com.example.aroundtheworld;
 
 public final class Manifest {
     public static final class permission {
-        public static final String ACESS_FINE_LOCATION="android.permission.ACESS_FINE_LOCATION";
+        public static final String MAPS_RECEIVE="com.example.aroundtheworld.permission.MAPS_RECEIVE";
     }
 }
